@@ -496,5 +496,44 @@ footer a:hover {
     gap: 60px;
 }
 
-force redeploy
+/* NAVBAR ACTIVE PAGE */
+.navbar a {
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
 
+.navbar a.active {
+    color: #e63946;
+    font-weight: 600;
+}
+
+/* ALT ÇİZGİ */
+.navbar a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #e63946;
+    border-radius: 10px;
+}
+
+/* HOVER EFEKT */
+.navbar a:hover {
+    color: #e63946;
+}
+
+.navbar a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #e63946;
+    opacity: 0.5;
+}
+
+force redeploy
