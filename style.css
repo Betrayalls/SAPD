@@ -536,4 +536,65 @@ footer a:hover {
     opacity: 0.5;
 }
 
+/* APOLETLER */
+.apolet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.apolet-card {
+    background: #14141c;
+    border-radius: 18px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* DARK HOVER IŞIK */
+.apolet-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top,
+        rgba(230,57,70,0.25),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.apolet-card:hover::before {
+    opacity: 1;
+}
+
+.apolet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+    border-color: rgba(230,57,70,0.5);
+}
+
+.apolet-card img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.apolet-card span {
+    display: block;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #e63946;
+    position: relative;
+    z-index: 1;
+}
+
 force redeploy
