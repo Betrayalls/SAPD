@@ -396,10 +396,10 @@ footer {
     transition: opacity 0.3s ease;
 }
 
-
 /* MOUSE GELİNCE */
 .photo-item:hover .photo-overlay {
     opacity: 1;
 }
+
 
 
