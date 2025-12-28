@@ -479,4 +479,18 @@ footer a:hover {
     color: #e63946;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center; /* 🔥 SAĞDAN → ORTAYA */
+    align-items: center;
+    padding: 15px 10%;
+    z-index: 1000;
+    gap: 60px;
+}
+
 force redeploy
