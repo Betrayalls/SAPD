@@ -1,52 +1,70 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>SAPD | Galeri</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>SAPD Galeri</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
-  <div class="logo">SAPD</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Ana Sayfa</a></li>
-    <li><a href="kurallar.html">Kurallar</a></li>
-    <li><a href="depo.html">Depo</a></li>
-    <li><a href="illegal.html">İllegal</a></li>
-  </ul>
+    <div class="logo">SAPD</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="kurallar.html">Kurallar</a></li>
+        <li><a href="depo.html">Depo</a></li>
+        <li><a href="illegal.html">İllegal</a></li>
+        <li><a href="galeri.html" class="active">Galeri</a></li>
+    </ul>
 </nav>
 
 <section class="gallery-header">
-  <h1>Departman Galerisi</h1>
-  <p>SAPD operasyonları, eğitimler ve departman içi görüntüler</p>
+    <h1>Departman Galerisi</h1>
+    <p>Departman içi faaliyet ve görüntüler</p>
 </section>
 
-<header class="hero" style="height:50vh;">
-    <div class="overlay"></div>
-    <div class="hero-content">
-        <a href="index.html" class="btn secondary">Ana Sayfaya Dön</a>
-        <a href="kurallar.html" class="btn secondary">Kurallara Git</a>
-        <a href="illegal.html" class="btn secondary">İllegal Eşyalara Git</a>
-        <a href="depo.html" class="btn secondary">Depoya Git</a>
-    </div>
-</header>
-  
-<section class="gallery-container">
-  <div class="gallery-item">
-    <img src="img/galeri1.jpg" alt="Operasyon">
-  </div>
-  <div class="gallery-item">
-    <img src="img/galeri2.jpg" alt="Eğitim">
-  </div>
-  <div class="gallery-item">
-    <img src="img/galeri3.jpg" alt="Devriye">
-  </div>
-  <div class="gallery-item">
-    <img src="img/galeri4.jpg" alt="Briefing">
-  </div>
+<section class="photo-grid">
+    <!-- Küçük resim galerisi -->
+    <img src="img/galeri1.jpg" onclick="openModal(0)">
+    <img src="img/galeri2.jpg" onclick="openModal(1)">
+    <img src="img/galeri3.jpg" onclick="openModal(2)">
+    <img src="img/galeri4.jpg" onclick="openModal(3)">
 </section>
+
+<!-- MODAL / LIGHTBOX -->
+<div id="photoModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div class="modal-nav">
+        <button onclick="changePhoto(-1)">&#10094;</button>
+        <button onclick="changePhoto(1)">&#10095;</button>
+    </div>
+</div>
+
+<script>
+const photos = [
+    "img/galeri1.jpg",
+    "img/galeri2.jpg",
+    "img/galeri3.jpg",
+    "img/galeri4.jpg"
+];
+let currentPhoto = 0;
+
+function openModal(index) {
+    currentPhoto = index;
+    document.getElementById("modalImg").src = photos[index];
+    document.getElementById("photoModal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("photoModal").style.display = "none";
+}
+
+function changePhoto(direction) {
+    currentPhoto = (currentPhoto + direction + photos.length) % photos.length;
+    document.getElementById("modalImg").src = photos[currentPhoto];
+}
+</script>
 
 </body>
 </html>
-
