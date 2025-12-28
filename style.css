@@ -597,39 +597,6 @@ footer a:hover {
     z-index: 1;
 }
 
-/* Apolet banner */
-.apolet-banner {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.apolet-banner img {
-    max-width: 300px;  /* İstersen kendi resmine göre ayarla */
-    width: 80%;
-    height: auto;
-}
-
-/* Liste şeklinde apoletler */
-.apolet-list {
-    max-width: 800px;
-    margin: 0 auto 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.apolet-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    background: #222;
-    padding: 10px 20px;
-    border-radius: 8px;
-}
-
-.apolet-item img {
-    width: 80px;
-    height: auto;
-}
 
 force redeploy
+
