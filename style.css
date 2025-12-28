@@ -323,4 +323,64 @@ footer {
     font-weight: 600;
 }
 
+/* ABOUT - GÖRSELLİ DÜZEN */
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.about-content {
+    text-align: left;
+}
+
+.about-desc {
+    font-size: 1.05rem;
+    opacity: 0.85;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.about-box {
+    background: #14141c;
+    padding: 30px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.about-box h3 {
+    color: #e63946;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.about-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.85;
+}
+
+/* MOBİL UYUMLULUK */
+@media (max-width: 900px) {
+    .about-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img {
+        height: 280px;
+    }
+}
+
 force redeploy
+
