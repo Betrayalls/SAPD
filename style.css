@@ -340,3 +340,27 @@ footer {
     color: #ccc;
     text-align: center;
 }
+
+.exit-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #111;
+    color: #fff;
+    border: 1px solid #444;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.exit-btn:hover {
+    background: #222;
+}
+
+.modal-desc {
+    color: #ddd;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+}
