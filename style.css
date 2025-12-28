@@ -142,9 +142,12 @@ footer {
 }
 
 .logo {
+    position: absolute;
+    left: 30px; /* 🔥 EN SOL */
     font-weight: 800;
     font-size: 1.2rem;
 }
+
 
 .navbar ul {
     list-style: none;
@@ -494,3 +497,4 @@ footer a:hover {
 }
 
 force redeploy
+
