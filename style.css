@@ -382,5 +382,101 @@ footer {
     }
 }
 
-force redeploy
+/* =========================
+   GLOBAL DARK HOVER EFFECT
+========================= */
 
+/* GENEL GEÇİŞ */
+a, button, .btn, .card, .item-card, .about-box, .rules-box, .illegal-list li {
+    transition: all 0.35s ease;
+}
+
+/* BUTONLAR */
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(230,57,70,0.35);
+    filter: brightness(1.1);
+}
+
+/* NAVBAR LINKLERİ */
+.navbar a {
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #e63946;
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* KARTLAR (ÖZELLİKLER, DEPO, GALERİ VB) */
+.card:hover,
+.item-card:hover,
+.rules-box:hover,
+.illegal-list li:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.65);
+    border-color: rgba(230,57,70,0.35);
+}
+
+/* IŞIK EFEKTİ (GENEL) */
+.card,
+.item-card,
+.rules-box,
+.illegal-list li,
+.about-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before,
+.item-card::before,
+.rules-box::before,
+.illegal-list li::before,
+.about-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(230,57,70,0.18),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.card:hover::before,
+.item-card:hover::before,
+.rules-box:hover::before,
+.illegal-list li:hover::before,
+.about-box:hover::before {
+    opacity: 1;
+}
+
+/* GALERİ FOTOĞRAF HOVER */
+.gallery-photo img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.gallery-photo:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* FOOTER LINKLERİ */
+footer a:hover {
+    color: #e63946;
+}
+
+force redeploy
