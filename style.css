@@ -382,21 +382,24 @@ footer {
 /* AÇIKLAMA OVERLAY */
 .photo-overlay {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.65);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.75);
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
+    padding-left: 12px;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
+
 
 /* MOUSE GELİNCE */
 .photo-item:hover .photo-overlay {
     opacity: 1;
 }
+
 
