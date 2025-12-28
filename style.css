@@ -597,6 +597,37 @@ footer a:hover {
     z-index: 1;
 }
 
+/* Grid yerine alt alta liste */
+.apolet-grid {
+    display: flex;
+    flex-direction: column; /* Alt alta sıralar */
+    align-items: center;    /* Ortalar */
+    gap: 20px;              /* Kutular arası boşluk */
+    max-width: 400px;       /* Orta boy genişlik */
+    margin: 0 auto;         /* Ortala sayfada */
+}
+
+/* Apolet kutuları */
+.apolet-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;              /* Resim ve isim arası boşluk */
+    background: #222;       /* Orijinal renk korunabilir */
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 100%;            /* Kutular max-width kadar */
+    max-width: 400px;       /* Orta boy */
+    transition: transform 0.2s;
+}
+
+.apolet-card:hover {
+    transform: scale(1.02); /* Hafif hover efekti */
+}
+
+/* Apolet görselleri */
+.apolet-card img {
+    width: 60px;  /* Orta boy resim */
+    height: auto;
+}
 
 force redeploy
-
