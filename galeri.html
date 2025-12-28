@@ -64,16 +64,18 @@
 
 <script>
 const photos = [
-    "img/galeri1.jpg",
-    "img/galeri2.jpg",
-    "img/galeri3.jpg",
-    "img/galeri4.jpg"
+    { src: "img/galeri1.jpg", desc: "Operasyon öncesi brifing" },
+    { src: "img/galeri2.jpg", desc: "Departman içi eğitim" },
+    { src: "img/galeri3.jpg", desc: "Gece devriyesi" },
+    { src: "img/galeri4.jpg", desc: "Operasyon sonrası değerlendirme" }
 ];
+
 let currentPhoto = 0;
 
 function openModal(index) {
     currentPhoto = index;
-    document.getElementById("modalImg").src = photos[index];
+    document.getElementById("modalImg").src = photos[index].src;
+    document.getElementById("modalDesc").innerText = photos[index].desc;
     document.getElementById("photoModal").style.display = "block";
 }
 
@@ -83,12 +85,15 @@ function closeModal() {
 
 function changePhoto(direction) {
     currentPhoto = (currentPhoto + direction + photos.length) % photos.length;
-    document.getElementById("modalImg").src = photos[currentPhoto];
+    document.getElementById("modalImg").src = photos[currentPhoto].src;
+    document.getElementById("modalDesc").innerText = photos[currentPhoto].desc;
 }
 </script>
 
+
 </body>
 </html>
+
 
 
 
