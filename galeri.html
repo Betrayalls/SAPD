@@ -33,13 +33,19 @@
 
 <!-- MODAL / LIGHTBOX -->
 <div id="photoModal" class="modal">
+    <button class="exit-btn" onclick="closeModal()">← Galeriye Dön</button>
+
     <span class="close" onclick="closeModal()">&times;</span>
+
     <img class="modal-content" id="modalImg">
+    <p id="modalDesc" class="modal-desc"></p>
+
     <div class="modal-nav">
         <button onclick="changePhoto(-1)">&#10094;</button>
         <button onclick="changePhoto(1)">&#10095;</button>
     </div>
 </div>
+
 
 <script>
 const photos = [
@@ -68,3 +74,4 @@ function changePhoto(direction) {
 
 </body>
 </html>
+
