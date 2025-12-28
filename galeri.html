@@ -24,23 +24,27 @@
 </section>
 
 <section class="photo-grid">
-    <!-- Küçük resim galerisi -->
-    <img src="img/galeri1.jpg" onclick="openModal(0)">
-    <img src="img/galeri2.jpg" onclick="openModal(1)">
-    <img src="img/galeri3.jpg" onclick="openModal(2)">
-    <img src="img/galeri4.jpg" onclick="openModal(3)">
-    <img src="img/galeri5.jpg" onclick="openModal(0)">
-    <img src="img/galeri6.jpg" onclick="openModal(0)">
-    <img src="img/galeri7.jpg" onclick="openModal(0)">
-    <img src="img/galeri8.jpg" onclick="openModal(0)">
-    <img src="img/galeri9.jpg" onclick="openModal(0)">
-    <img src="img/galeri10.jpg" onclick="openModal(0)">
-    <img src="img/galeri11.jpg" onclick="openModal(0)">
-    <img src="img/galeri12.jpg" onclick="openModal(0)">
-    <img src="img/galeri13.jpg" onclick="openModal(0)">
-    <img src="img/galeri14.jpg" onclick="openModal(0)">
-    <img src="img/galeri15.jpg" onclick="openModal(0)">
+    <div class="photo-item" onclick="openModal(0)">
+        <img src="img/galeri1.jpg">
+        <p>Operasyon öncesi brifing</p>
+    </div>
+
+    <div class="photo-item" onclick="openModal(1)">
+        <img src="img/galeri2.jpg">
+        <p>Departman içi eğitim</p>
+    </div>
+
+    <div class="photo-item" onclick="openModal(2)">
+        <img src="img/galeri3.jpg">
+        <p>Gece devriyesi</p>
+    </div>
+
+    <div class="photo-item" onclick="openModal(3)">
+        <img src="img/galeri4.jpg">
+        <p>Operasyon sonrası değerlendirme</p>
+    </div>
 </section>
+
 
 <!-- MODAL / LIGHTBOX -->
 <div id="photoModal" class="modal">
@@ -85,5 +89,6 @@ function changePhoto(direction) {
 
 </body>
 </html>
+
 
 
