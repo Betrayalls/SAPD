@@ -1,104 +1,76 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>SAPD Galeri</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+<!-- TEMPLATE KODUNUN ÜSTÜNE -->
+<title>SAPD Galeri - 1</title>
+...
+<div class="gallery-photo">
+  <img src="img/galeri1.jpg" alt="Operasyon öncesi">
+  <div class="gallery-desc">Operasyon öncesi görüntüler</div>
+</div>
+<div class="gallery-photo">
+  <img src="img/galeri2.jpg" alt="Departman içi eğitim">
+  <div class="gallery-desc">Departman içi eğitim</div>
+</div>
+<div class="gallery-photo">
+  <img src="img/galeri3.jpg" alt="Gece devriyesi">
+  <div class="gallery-desc">Gece devriyesi</div>
+</div>
+...
+<div class="gallery-pagination">
+  <a class="disabled">&laquo;</a>
+  <a class="active" href="galeri-1.html">1</a>
+  <a href="galeri-2.html">2</a>
+  <a href="galeri-3.html">3</a>
+  <a href="galeri-2.html">&raquo;</a>
+</div>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
-    <div class="logo">SAPD</div>
-    <ul class="nav-links">
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="kurallar.html">Kurallar</a></li>
-        <li><a href="depo.html">Depo</a></li>
-        <li><a href="illegal.html">İllegal</a></li>
-        <li><a href="galeri.html" class="active">Galeri</a></li>
-    </ul>
+  <div class="logo">SAPD</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Ana Sayfa</a></li>
+    <li><a href="kurallar.html">Kurallar</a></li>
+    <li><a href="depo.html">Depo</a></li>
+    <li><a href="illegal.html">İllegal</a></li>
+    <li><a href="galeri-1.html">Galeri</a></li>
+  </ul>
 </nav>
 
-<section class="gallery-header">
-    <h1>Departman Galerisi</h1>
-    <p>Departman içi faaliyet ve görüntüler</p>
+<section class="gallery-big-header">
+  <h1>Departman Galeri SAYFA_TITLE</h1>
 </section>
 
-<section class="photo-grid large">
+<section class="gallery-page">
 
-    <div class="photo-item">
-        <img src="img/galeri1.jpg">
-        <div class="photo-overlay">Operasyon öncesi brifing</div>
-    </div>
+  <!-- FOTO 1 -->
+  <div class="gallery-photo">
+      <img src="img/FOTO1" alt="AÇIKLAMA1">
+      <div class="gallery-desc">AÇIKLAMA1</div>
+  </div>
 
-    <div class="photo-item">
-        <img src="img/galeri2.jpg">
-        <div class="photo-overlay">Departman içi eğitim</div>
-    </div>
+  <!-- FOTO 2 -->
+  <div class="gallery-photo">
+      <img src="img/FOTO2" alt="AÇIKLAMA2">
+      <div class="gallery-desc">AÇIKLAMA2</div>
+  </div>
 
-    <div class="photo-item">
-        <img src="img/galeri3.jpg">
-        <div class="photo-overlay">Gece devriyesi</div>
-    </div>
+  <!-- FOTO 3 -->
+  <div class="gallery-photo">
+      <img src="img/FOTO3" alt="AÇIKLAMA3">
+      <div class="gallery-desc">AÇIKLAMA3</div>
+  </div>
 
 </section>
 
-<div class="pagination">
-    <a class="active" href="galeri.html">1</a>
-    <a href="galeri-2.html">2</a>
-    <a href="galeri-3.html">3</a>
+<!-- PAGINATION -->
+<div class="gallery-pagination">
+  PAGINATION_LINKS
 </div>
-
-
-
-
-<!-- MODAL / LIGHTBOX -->
-<div id="photoModal" class="modal">
-    <button class="exit-btn" onclick="closeModal()">← Galeriye Dön</button>
-
-    <span class="close" onclick="closeModal()">&times;</span>
-
-    <img class="modal-content" id="modalImg">
-    <p id="modalDesc" class="modal-desc"></p>
-
-    <div class="modal-nav">
-        <button onclick="changePhoto(-1)">&#10094;</button>
-        <button onclick="changePhoto(1)">&#10095;</button>
-    </div>
-</div>
-
-
-
-<script>
-const photos = [
-    { src: "img/galeri1.jpg", desc: "Operasyon öncesi brifing" },
-    { src: "img/galeri2.jpg", desc: "Departman içi eğitim" },
-    { src: "img/galeri3.jpg", desc: "Gece devriyesi" },
-    { src: "img/galeri4.jpg", desc: "Operasyon sonrası değerlendirme" }
-];
-
-let currentPhoto = 0;
-
-function openModal(index) {
-    currentPhoto = index;
-    document.getElementById("modalImg").src = photos[index].src;
-    document.getElementById("modalDesc").innerText = photos[index].desc;
-    document.getElementById("photoModal").style.display = "block";
-}
-
-function closeModal() {
-    document.getElementById("photoModal").style.display = "none";
-}
-
-function changePhoto(direction) {
-    currentPhoto = (currentPhoto + direction + photos.length) % photos.length;
-    document.getElementById("modalImg").src = photos[currentPhoto].src;
-    document.getElementById("modalDesc").innerText = photos[currentPhoto].desc;
-}
-</script>
 
 </body>
 </html>
-
-
-
-
