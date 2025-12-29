@@ -743,4 +743,20 @@ footer a:hover {
 }
 
 
+/* BLOG LİSTE – SOLA YASLI, ALT ALTA */
+.blog-page-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0;
+}
+
+/* KUTULAR TAM GENİŞLİK OLSUN */
+.blog-card {
+    width: 100%;
+}
+
 force redeploy
+
