@@ -758,5 +758,24 @@ footer a:hover {
     width: 100%;
 }
 
+.blog-card {
+    display: flex;
+    gap: 20px;
+}
+
+.blog-card img {
+    width: 220px;
+    height: 140px;
+    border-radius: 12px;
+}
+
+.blog-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 force redeploy
+
 
