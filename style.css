@@ -838,5 +838,22 @@ footer a:hover {
     font-size: 0.95rem;
 }
 
+/* YÖNETİM KADROSU ARKA PLAN */
+.yonetim-bg {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+        url("img/hero.jpg") center / cover no-repeat fixed;
+}
+
+.management-card {
+    background: rgba(20,20,28,0.75);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
 
 force redeploy
+
