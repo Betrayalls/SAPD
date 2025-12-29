@@ -854,7 +854,75 @@ footer a:hover {
     box-shadow: 0 0 30px rgba(0,0,0,0.6);
 }
 
+/* BİRİMLER LİSTESİ */
+.units-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.unit-row {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #14141c;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.unit-row img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.unit-row span {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.unit-row:hover {
+    background: #1b1b26;
+    transform: translateX(6px);
+}
+
+/* DETAY SAYFASI */
+.unit-detail {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #14141c;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.unit-chiefs {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.unit-chief {
+    text-align: center;
+}
+
+.unit-chief img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e63946;
+}
+
+.unit-chief span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
 
 force redeploy
-
-
