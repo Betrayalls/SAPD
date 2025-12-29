@@ -924,5 +924,26 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
+/* PASİF BİRİM */
+.unit-row.passive {
+    opacity: 0.45;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.unit-status {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #b71c1c;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
 
 force redeploy
+
