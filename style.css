@@ -944,6 +944,21 @@ footer a:hover {
     font-weight: 700;
 }
 
+.chief-name {
+    display: block;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.chief-rank {
+    display: block;
+    font-size: 0.85rem;
+    opacity: 0.6;
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+}
+
 
 force redeploy
+
 
