@@ -775,7 +775,68 @@ footer a:hover {
     justify-content: center;
 }
 
+/* YÖNETİM HİYERARŞİ */
+.hierarchy {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hierarchy-desc {
+    opacity: .7;
+    margin-bottom: 60px;
+}
+
+.rank-block {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.rank-block h3 {
+    color: #e63946;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+/* SATIR */
+.rank-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* KİŞİ KUTUSU */
+.person-card {
+    background: #14141c;
+    border-radius: 16px;
+    padding: 15px;
+    width: 160px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.person-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(230,57,70,0.4);
+}
+
+/* FOTO */
+.person-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* İSİM */
+.person-card span {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 
 force redeploy
-
-
