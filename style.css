@@ -843,7 +843,7 @@ footer a:hover {
     min-height: 100vh;
     background:
         linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
-        url("img/hero.jpg") center / cover no-repeat fixed;
+        url("img/yonetimarka.jpg") center / cover no-repeat fixed;
 }
 
 .management-card {
@@ -856,4 +856,5 @@ footer a:hover {
 
 
 force redeploy
+
 
