@@ -1458,5 +1458,15 @@ footer a:hover {
     font-size: 15px;
 }
 
+.hero-illegal {
+    height: 70vh; /* yarım görünümü bitiren kısım */
+    min-height: 520px;
+    background-image: url("img/hero.jpg"); /* BURAYI DEĞİŞTİREBİLİRSİN */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 
 force redeploy
+
