@@ -1242,6 +1242,78 @@ footer a:hover {
     font-weight: bold;
 }
 
+/* GALERİ GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 30px;
+}
+
+/* FOTO KART */
+.gallery-item {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* HOVER AÇIKLAMA */
+.gallery-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.gallery-item:hover .gallery-hover {
+    opacity: 1;
+}
+
+/* MODAL */
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.92);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 14px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 
 force redeploy
+
 
