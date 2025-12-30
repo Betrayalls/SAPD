@@ -1,4 +1,12 @@
 * {
+    transition: background-color .3s ease,
+                color .3s ease,
+                transform .35s ease,
+                box-shadow .35s ease,
+                opacity .35s ease;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -1330,6 +1338,7 @@ footer a:hover {
 
 
 force redeploy
+
 
 
 
