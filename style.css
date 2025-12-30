@@ -1390,5 +1390,16 @@ footer a:hover {
     transform: translateY(0);
 }
 
+/* DROPDOWN ALT ALTA SIRALAMA FIX */
+.dropdown-menu {
+    display: block !important;
+}
+
+.dropdown-menu li {
+    display: block;
+    width: 100%;
+}
+
 
 force redeploy
+
