@@ -1162,6 +1162,19 @@ footer a:hover {
     margin-bottom: 18px;
 }
 
+.unit-desc-list {
+    margin-top: 20px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.unit-desc-list li {
+    list-style: disc; /* büyük nokta */
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+}
+
 
 force redeploy
-
