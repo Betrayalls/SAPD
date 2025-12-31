@@ -160,7 +160,7 @@ counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         const current = +counter.innerText;
 
-        const increment = target / 120; // hız (küçült → yavaşlar)
+        const increment = target / 70; // hız (küçült → yavaşlar)
 
         if (current < target) {
             counter.innerText = Math.ceil(current + increment);
@@ -177,6 +177,7 @@ counters.forEach(counter => {
     
 </body>
 </html>
+
 
 
 
