@@ -151,49 +151,43 @@
 </footer>
 
 <script>
-const counters = document.querySelectorAll('.counter');
+let started = false;
 
-counters.forEach(counter => {
-    counter.innerText = '0';
+function startCounters() {
+    const counters = document.querySelectorAll(".counter");
 
-    const updateCounter = () => {
-        const target = +counter.getAttribute('data-target');
-        const current = +counter.innerText;
+    counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        let current = 0;
+        const increment = target / 100;
 
-        const increment = target / 70; // hız (küçült → yavaşlar)
+        const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                counter.innerText = Math.ceil(current);
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.innerText = target + "+";
+            }
+        };
 
-        if (current < target) {
-            counter.innerText = Math.ceil(current + increment);
-            setTimeout(updateCounter, 20);
-        } else {
-            counter.innerText = target;
-        }
-    };
+        updateCounter();
+    });
+}
 
-    updateCounter();
+window.addEventListener("scroll", () => {
+    const statsSection = document.getElementById("stats");
+    const sectionTop = statsSection.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (sectionTop < screenHeight && !started) {
+        startCounters();
+        started = true;
+    }
 });
 </script>
+
 
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
